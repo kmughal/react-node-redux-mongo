@@ -12,10 +12,12 @@ const TaskInputPanelComponent = ({ tasks, addNewTask }) => (
 					New task:
 				</label>
 				<input className="form-control" type="text" name="new-task" id="new-task" />
-			</div>
-			<button className="btn btn-primary" onClick={addNewTask}>
+				&nbsp;
+				<button className="btn btn-primary" onClick={addNewTask}>
 				Save
 			</button>
+			</div>
+			
 		</form>
 		<TasksViewComponent tasks={tasks} />
 	</section>

@@ -5,7 +5,7 @@ let count = 0;
 export const TasksViewComponent = ({ tasks }) => (
 	<section>
 		<button
-			className="btn btn-primary"
+			className="btn btn-success"
 			type="button"
 			data-toggle="collapse"
 			data-target="#tasks-list"
@@ -14,15 +14,21 @@ export const TasksViewComponent = ({ tasks }) => (
 		>
 			Tasks [{tasks.length}]
 		</button>
-		<div className="collapse" id="tasks-list">
+	
+		<div>
+			<br/>
 			{tasks.length ? (
-				<ul className="list-group">
+				<div className="mt-10 pt-20">
 					{tasks.map(task => (
-						<li className="list-group-item" key={count++}>
-							{task.task}
-						</li>
+						<div className="card p-2 mt-10" key={count++}>
+							<h5>A task added by you!</h5>
+							<div className="card-body">
+								<p className="card-text">{task.task}</p>
+							</div>
+							<button className="btn btn-primary">Edit</button>
+						</div>
 					))}
-				</ul>
+				</div>
 			) : (
 				<p className="alert alert-info" role="alert">
 					Currently you dont have any task!

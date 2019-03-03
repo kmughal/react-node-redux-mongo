@@ -6,12 +6,20 @@ import { Redirect } from "react-router";
 
 const LoginHeadingComponent = ({ authenticated }) => {
 	if (!authenticated && authenticated !== false) {
-		return <p className="alert alert-info" role="alert">Please enter login details to sign in</p>;
+		return (
+			<p className="alert alert-info" role="alert">
+				Please enter login details to sign in
+			</p>
+		);
 	} else {
 		return authenticated ? (
-			<p className="alert alert-success" role="alert">Details are correct!</p>
+			<p className="alert alert-success" role="alert">
+				Details are correct!
+			</p>
 		) : (
-			<p className="alert alert-danger" role="alert">Invalid user information</p>
+			<p className="alert alert-danger" role="alert">
+				Invalid user information
+			</p>
 		);
 	}
 };
@@ -23,20 +31,35 @@ const LoginComponent = ({ sendForm, authenticated }) =>
 		<section>
 			<LoginHeadingComponent authenticated={authenticated} />
 			<form onSubmit={sendForm}>
-				<input
-					id="username"
-					name="username"
-					type="text"
-					placeholder="username"
-				/>
-				<input
-					id="password"
-					name="password"
-					type="text"
-					placeholder="password"
-				/>
-				{}
-				<input type="submit" value="Login" />
+				<div className="form-row align-items-center">
+					<div className="col-auto">
+						<label htmlFor="username" className="sr-only">
+							Username
+						</label>
+						<input
+							id="username"
+							name="username"
+							type="text"
+							placeholder="username"
+							className="form-control mb-2"
+						/>
+					</div>
+					<div className="col-auto">
+						<label className="sr-only" htmlFor="password">
+							Password
+						</label>
+						<input
+							id="password"
+							name="password"
+							type="text"
+							placeholder="password"
+							className="form-control mb-2"
+						/>
+					</div>
+					<div className="col-auto">
+						<button className="btn btn-primary">Sign-In</button>
+					</div>
+				</div>
 			</form>
 		</section>
 	);

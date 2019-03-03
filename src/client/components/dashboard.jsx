@@ -6,7 +6,7 @@ import { history } from "../infrastructure/history";
 
 const DashboardComponent = ({ id, name }) => (
 	<section>
-		<button className="btn btn-primary" onClick={() => history.push("/")}>
+		<button className="btn btn-primary" onClick={() => history.push("/signout")}>
 			Sign out
 		</button>
 		<h1>Welcome {name}</h1>
