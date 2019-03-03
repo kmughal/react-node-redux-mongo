@@ -1,3 +1,16 @@
+# Introduction
+
+Simple Todo app using:
+- Node
+- Express
+- React, Redux and Sagas!
+- Mongo
+
+Missing which I plan to add :
+
+- Unit testing at service / repo layer
+- Component level unit testing.
+
 # Mongodb on mac
 
 - Run following command :
