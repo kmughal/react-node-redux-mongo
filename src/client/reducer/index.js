@@ -15,14 +15,16 @@ import {
   saveState
 } from "./local-storage";
 
-import {reducers} from "./reducers";
+import {
+  reducers
+} from "./reducers";
 
 const sagaMiddleware = createSagaMiddleware();
 const presistedState = getState();
 
-export const store = presistedState !== null ? createStore(reducers, presistedState, 
-  applyMiddleware( createLogger(), sagaMiddleware)) : createStore(reducers, 
-    applyMiddleware( createLogger(), sagaMiddleware));
+export const store = presistedState !== null ? createStore(reducers, presistedState,
+  applyMiddleware(createLogger(), sagaMiddleware)) : createStore(reducers,
+  applyMiddleware(createLogger(), sagaMiddleware));
 
 store.subscribe(() => {
   saveState(store.getState());
