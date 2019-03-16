@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Task View Component. render 1`] = `
+<section>
+  <button
+    aria-controls="collapseExample"
+    aria-expanded="false"
+    className="btn btn-success"
+    data-target="#tasks-list"
+    data-toggle="collapse"
+    type="button"
+  >
+    Tasks [
+    0
+    ]
+  </button>
+  <div>
+    <br />
+    <p
+      className="alert alert-info"
+      role="alert"
+    >
+      Currently you dont have any task.
+    </p>
+  </div>
+</section>
+`;
