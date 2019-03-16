@@ -21,7 +21,7 @@ export const TasksViewComponent = ({ tasks }) => (
 				<div className="mt-10 pt-20">
 					{tasks.map(task => (
 						<div className="card p-2 mt-10" key={count++}>
-							<h5>A task added by you!</h5>
+							<h5>A task added by you.</h5>
 							<div className="card-body">
 								<p className="card-text">{task.task}</p>
 							</div>
@@ -31,7 +31,7 @@ export const TasksViewComponent = ({ tasks }) => (
 				</div>
 			) : (
 				<p className="alert alert-info" role="alert">
-					Currently you dont have any task!
+					Currently you dont have any task.
 				</p>
 			)}
 		</div>
