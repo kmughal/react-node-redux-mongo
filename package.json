@@ -9,38 +9,46 @@
     "dev:dist": "webpack --mode development",
     "client": "nodemon node ./src/client/index.js",
     "server": "nodemon node ./src/server",
-    "start": "concurrently \"npm run server\"  \"npm run client\""
+    "start": "concurrently \"npm run server\"  \"npm run client\"",
+    "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Khurram Shahzad",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.3.3",
+    "@babel/core": "^7.3.4",
     "@babel/node": "7.2.2",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-node8": "^1.2.0",
+    "concurrently": "4.1.0",
     "eslint": "^5.14.1",
     "eslint-plugin-react": "^7.12.4",
     "expres": "*",
+    "nodemon": "1.18.10",
+    "react-test-renderer": "16.8.4",
     "redux-logger": "3.0.6",
     "redux-saga": "1.0.1",
+    "redux-saga-mock": "^1.2.0",
     "webpack": "^4.29.5",
     "webpack-cli": "3.2.3",
-    "webpack-dev-server": "3.2.0",
-    "nodemon": "1.18.10",
-    "concurrently": "4.1.0"
+    "webpack-dev-server": "3.2.0"
   },
   "dependencies": {
     "axios": "0.18.0",
+    "babel-jest": "^24.5.0",
+    "babel-preset-stage-0": "6.24.1",
     "body-parser": "1.18.3",
     "cors": "2.8.5",
     "express": "4.16.4",
     "express-session": "^1.15.6",
     "helmet": "^3.15.1",
     "history": "4.7.2",
+    "jest-cli": "24.3.1",
     "md5": "^2.2.1",
     "mongodb": "3.1.13",
     "react": "16.8.3",
@@ -51,5 +59,11 @@
     "redux": "^4.0.1",
     "uid-safe": "^2.1.5",
     "uuid": "3.3.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
