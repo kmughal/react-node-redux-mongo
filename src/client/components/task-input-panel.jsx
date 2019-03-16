@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 import { TasksViewComponent } from "./tasks-view";
 
-const TaskInputPanelComponent = ({ tasks, addNewTask }) => (
+export const TaskInputPanelComponent = ({ tasks, addNewTask }) => (
 	<section>
 		<form className="form-inline">
 			<div className="form-group mb-2">
@@ -29,11 +29,11 @@ TaskInputPanelComponent.propTypes = {
 	tasks: PropTypes.array
 };
 
-const mapStateToProps = ({ records, sessions }) => ({
+export const mapStateToProps = ({ records, sessions }) => ({
 	tasks: records.tasks ? records.tasks : sessions.tasks
 });
 
-const mapActionToProps = (dispatch, { id }) => ({
+export const mapActionToProps = (dispatch, { id }) => ({
 	addNewTask() {
 		const newTask = document.getElementById("new-task").value;
 		dispatch(actions.addNewTask(id, newTask));
